@@ -5,8 +5,7 @@ title:  "Homemade SLAM Sensor"
 start_date: 2015-12-25
 date:   2015-12-28 13:14:53 +1000
 
-categories: projects
-permalink: /:categories/:title/
+permalink: /projects/slam-sensor/
 subtitle: My first attempt at a basic simultaneous location and mapping robot.
 
 published: true
