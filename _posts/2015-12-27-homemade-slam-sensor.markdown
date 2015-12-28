@@ -13,9 +13,7 @@ published: true
 ## Quick Links
 
 * **[Aim](#aim)**
-
 * **[Hardware Design](#hardware-design)**
-	* [Worm Gear-set](#worm-gear-set)
 
 ## Aim  {#aim}
 
@@ -34,14 +32,18 @@ The motor I had handy ran at approximately 11,000RPM@5V (no load). I estimated t
 
 ![gear-iterations](/assets/slam-sensor/gear-iterations.jpg)
 
-Next a light box was printed to test the fit the gears. The final tested rotor speed was 320RPM@3.3V which was sufficienty close to the desired speed. One issue was that the gearbox was very loud. This was possibly due to:
+The final tested rotor speed was 320RPM@3.3V which was sufficienty close to the desired speed. One issue was that the gearbox was very loud. This was possibly due to:
 
 * slight printing defects causing vibrations;
 * thin case walls amplifying small vibrations.
 
-![gear-iterations](/assets/slam-sensor/first-gearbox-1.jpg){:width="50%"}![gear-iterations](/assets/slam-sensor/first-gearbox-2.jpg){:width="50%"}
+![gear-iterations-1](/assets/slam-sensor/first-gearbox-1.jpg){:width="50%"}![gear-iterations-2](/assets/slam-sensor/first-gearbox-2.jpg){:width="50%"}
 
 These two problems were solved by:
 
 * which were solved by changing from PLA to ABS plastic which can be vapour smoothed;
 * using thicker case walls.
+
+Giving the final concept design and CAD.
+
+![design-cad](/assets/slam-sensor/initial-concept-design-cad.png){:width="50%"}![final-design](/assets/slam-sensor/initital-concept-design.jpg){:width="50%"}
