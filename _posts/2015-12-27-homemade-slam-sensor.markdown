@@ -8,6 +8,7 @@ date:   2015-12-28 13:14:53 +1000
 permalink: /projects/slam-sensor/
 subtitle: My first attempt at a basic simultaneous location and mapping robot.
 
+ongoing: true
 published: true
 ---
 ## Quick Links
