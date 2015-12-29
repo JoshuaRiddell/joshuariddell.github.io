@@ -1,2 +1,7 @@
 # joshuariddell.github.io
-Public site
+
+## To Do:
+
+* Add YSA signup software
+* Add ENGG1200 project
+* Add image caption CSS
