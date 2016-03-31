@@ -15,7 +15,17 @@
 
     > li {
         margin-bottom: $spacing-unit;
+        overflow: hidden;
+        height: 1%;
     }
+}
+
+.post-list-div{
+    float: left;
+    vertical-align: middle;
+    margin-top: 42px;
+    margin-bottom: 35px;
+    margin-left: 20px;
 }
 
 .post-meta {

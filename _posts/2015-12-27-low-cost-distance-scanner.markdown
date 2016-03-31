@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Homemade SLAM Sensor"
+title:  "Low Cost Distance Scanner"
 
 start_date: 2015-12-25
-date:   2015-12-28 13:14:53 +1000
+date:   2016-01-04 13:14:53 +1000
 
-permalink: /projects/slam-sensor/
+permalink: /projects/distance-scanner/
 subtitle: My first attempt at a basic simultaneous location and mapping robot.
+cover-image: /assets/distance-scanner/thumbnail.jpg
 
-ongoing: true
 published: true
 ---
 ## Quick Links
@@ -36,11 +36,11 @@ The motor I had available for use ran with approximately 11,000RPM@5V (no load).
 
 From left to right: V1, worm pitch is too close to printer resolution; V2, worm pitch too large; V3 balance between print quality and size; V3 accompanying gear; V3.1 gear with bearing attachment.
 
-![gear-iterations](/assets/slam-sensor/gear-iterations.jpg)
+![gear-iterations](/assets/distance-scanner/gear-iterations.jpg)
 
 The final tested rotor speed was 320RPM@3.3V which was sufficienty close to the desired speed.
 
-![gear-iterations-1](/assets/slam-sensor/first-gearbox-1.jpg){:width="50%"}![gear-iterations-2](/assets/slam-sensor/first-gearbox-2.jpg){:width="50%"}
+![gear-iterations-1](/assets/distance-scanner/first-gearbox-1.jpg){:width="50%"}![gear-iterations-2](/assets/distance-scanner/first-gearbox-2.jpg){:width="50%"}
 
 The main issue during testing was that the gearbox was very loud. This was possibly due to:
 
@@ -58,7 +58,7 @@ These tests indicated that the worm gear-set was feasable. The above improvement
 
 The rotor consists of 4 slip rings (+5V, GND, SIG1, SIG2) constructed using ~1.5mm thick copper piping slices. These were inexpensive to produce and provided a good surface for electrical connection. The CAD model and sensor mockup below were an indication of the appearance of the final design.
 
-![design-cad](/assets/slam-sensor/initial-concept-design-cad.png){:width="50%"}![final-design](/assets/slam-sensor/initital-concept-design.jpg){:width="50%"}
+![design-cad](/assets/distance-scanner/initial-concept-design-cad.png){:width="50%"}![final-design](/assets/distance-scanner/initital-concept-design.jpg){:width="50%"}
 
 ### Assembly
 
@@ -66,18 +66,18 @@ The first step in assembly was the rotor, the parts for which are shown below.
 
 From left to right: drive gear (with bearing mount), connector, bearing mount, +5V slip ring, GND slip ring, SIG1 slip ring, SIG2 slip ring, sensor mount, IR sensors.
 
-![rotor-gear-parts](/assets/slam-sensor/final-rotor-assembly.jpg)
+![rotor-gear-parts](/assets/distance-scanner/final-rotor-assembly.jpg)
 
 During assembly:
 
-![rotor-gear-parts](/assets/slam-sensor/rotor-assembly-1.jpg)
+![rotor-gear-parts](/assets/distance-scanner/rotor-assembly-1.jpg)
 
 #### Acetone Vapour Smoothing {#acetone}
 
 As part of assembly, the rotor and worm gear were treated with an acetone vapour bath. This temporarily dissolves the outer surface of the parts which merges the layers together. This smooths the outer surface and slightly strengthens the part. The setup consisted of a jar with approximately 10mL of acetone in. The print bed was heated to 90&deg;C and the acetone vapour was allowed to fill the jar. Parts were submerged in the gas for approximately 5 minutes.
 
-![acetone-treating](/assets/slam-sensor/acetone-treating.jpg)
+![acetone-treating](/assets/distance-scanner/acetone-treating.jpg)
 
 The treated product is shown below.
 
-![treated-rotor-and-worm](/assets/slam-sensor/final-gear-assembly-constructed.jpg)
+![treated-rotor-and-worm](/assets/distance-scanner/final-gear-assembly-constructed.jpg)
