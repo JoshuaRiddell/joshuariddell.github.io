@@ -51,12 +51,10 @@ Below is the product with all electronics mounted. A geared motor with spool was
 
 ## Software Design  {#software-design}
 
-The software was originally intended 
+The software was originally intended to use a magnetometer to detect the signature of the black box. However, because the magnet inside the black box was not large enough to be detected from the surface of the water, a random search pattern was used. This is a very simple, drive until it hits a wall, turn, and then drive forward again. The video below shows a demo of this. There are multiple 'timeouts' demonstrated which are set to just before the marking criteria times.
 
-```C++
+<iframe width="100%" height="416" src="https://www.youtube.com/embed/1A92n00Pfr0" frameborder="0" allowfullscreen></iframe>
 
-int code_snippet() {
-	hello world
-}
+This, and a combination of sheer luck, meant we achieved full marks for the demo. Video shown below
 
-```
+<iframe width="100%" height="416" src="https://www.youtube.com/embed/PnMQFqMhSAs" frameborder="0" allowfullscreen></iframe>

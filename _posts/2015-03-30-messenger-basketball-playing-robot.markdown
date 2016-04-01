@@ -24,6 +24,8 @@ published: true
 * [Github Codebase](https://github.com/joshuariddell/messenger-basketball-player)
 * [Reddit Post](https://www.reddit.com/r/engineering/comments/4c50u7/i_made_a_robot_that_plays_facebook_messenger/)
 
+## Overview
+
 Facebook Messenger recently released a minigame in which players try to take shots at a basketball hoop. The hoop is originally still but begins to move as your points increase. The aim of the game is to beat your friends in Facebook group chats. I don't have the patience for tedious games such as this, so I made a robot which plays it for me.
 
 The high score of the robot is 157 so far, the highest human score I have heard of from my friends is 45.
@@ -34,7 +36,7 @@ The high score of the robot is 157 so far, the highest human score I have heard 
 
 The robot uses a webcam to track the basket and ball on the phone screen. It uses a simple 2 degree-of-freedom arm for interaction with the screen. My aim for this short (2-3 day) project was to have a robot which plays it 'as a human would', meaning, there is no software trickery by using tools such as [adb](http://developer.android.com/tools/help/adb.html).
 
-# [Computer Vision](#cv) {#cv}
+## [Computer Vision](#cv) {#cv}
 
 I used [OpenCV](http://opencv.org/) bindings for [Python2.7](http://python.org/). Python is my strongest language, and handles a lot of the low level memory stuff for me, so it was well suited to this quick prototype.
 
@@ -56,7 +58,7 @@ When the hoop is stationary the hardware is sent commands such that it will flic
 
 To send to the robotic hardware, the (x,y) coordinates of the screen pixels are firstly converted to the (x,y) coordinates of the robot using a linear transformation. The robot (x,y) coordinates are then translated into motor degrees using an inverse kinematics model I modelled based on simple trigonometric functions.
 
-# [Robotic Hardware](#hardware) {#hardware}
+## [Robotic Hardware](#hardware) {#hardware}
 
 The robot consists of 3 ultra cheap ($USD3-4) servos for actuation and an arduino to convert the serial input from the computer vision program, into a low level signal for the servos. The Arduino acts only as a converter and does not perform any logical operations. This was done only because uploading to the arduino is a slow and tedious process when repeatedly testing code.
 
@@ -86,7 +88,7 @@ Finished wiring (the angle of the camera mount is intentional to give more space
 
 ![raw-image](/assets/messenger-basketball-playing-robot/hardware/finished-wiring.jpg)
 
-# [Videos](#videos) {#videos}
+## [Videos](#videos) {#videos}
 
 <iframe width="100%" height="416" src="https://www.youtube.com/embed/skqJ1wn8O7E" frameborder="0" allowfullscreen></iframe>
 
