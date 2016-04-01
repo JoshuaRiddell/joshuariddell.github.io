@@ -14,70 +14,78 @@ published: true
 ## Quick Links
 
 * **[Aim](#aim)**
-* **[Hardware Design](#hardware-design)**
-	* 
-* rotor
+* **[Hardware](#hardware)**
+* **[Software](#software)**
+* **[Electrical](#electrical)**
 
+## Overview
 
-## Aim  {#aim}
+The distance scanner is two SHARP IR Distance sensors mounted onto a 360 degree rotating spindle. This sensor is intended for use on low cost effective Arduino robots, where a laser scanner is out of scope both in terms of processing power and monetary cost.
+
+## [Aim](#aim)  {#aim}
 
 The aim of this project was to:
 
 * refine my mechanical design and manufacturing skills;
 * gain experience in creating electrical connections over moving parts;
-* create a basic SLAM (simultaneous location and mapping) sensor at a low cost;
-* design basic location algorithms.
+* create a basic distance scanning sensor at a low cost;
+* design basic SLAM algorithms.
 
-## Hardware Design  {#hardware-design}
+## [Hardware](#hardware)  {#hardware}
 
-### Worm Gear-Set Feasability Testing  {#worm-gear-set}
+### [Worm Gear-set](#worm-gear-set)  {#worm-gear-set}
 
-The motor I had available for use ran with approximately 11,000RPM@5V (no load). I estimated that 120RPM would be a reasonable speed for the sensor rotor giving a 2Hz full refresh rate. I was not aiming for a high performance sensor and the higher the speeds, the better the rotor has to be balanced. The final gear ratio was 19:1 which balanced printing resolution and desired size. This gave a projected speed of 580RPM not accounting for frictional losses. Below are the gear iterations which were used to optimise printing performance and gear ratio.
+The motor used runs at ~11,000RPM@5V (no load). The maximum gear ratio which could be fitted into the case was 1:19. This was limited by the print resolution.
 
-From left to right: V1, worm pitch is too close to printer resolution; V2, worm pitch too large; V3 balance between print quality and size; V3 accompanying gear; V3.1 gear with bearing attachment.
+Below are some iterations of the worm gears.
 
-![gear-iterations](/assets/distance-scanner/gear-iterations.jpg)
+![gear-iterations](/assets/distance-scanner/hardware/gear-iterations.jpg)
 
-The final tested rotor speed was 320RPM@3.3V which was sufficienty close to the desired speed.
+The tested rotor speed was 320RPM@3.3V which although much lower than the original, is still too fast for the sensor. As  shown in the DATA COLLECTION.
 
-![gear-iterations-1](/assets/distance-scanner/first-gearbox-1.jpg){:width="50%"}![gear-iterations-2](/assets/distance-scanner/first-gearbox-2.jpg){:width="50%"}
+![gear-iterations-1](/assets/distance-scanner/hardware/first-gearbox-1.jpg){:width="50%"}![gear-iterations-2](/assets/distance-scanner/hardware/first-gearbox-2.jpg){:width="50%"}
 
-The main issue during testing was that the gearbox was very loud. This was possibly due to:
+The main issue found during testing was that the gearbox was very loud. This was rectified by changing from PLA to ABS plastic, which can be smoothed using acetone vapour treating, and using thicker walls to prevent vibrations.
 
-* slight printing defects causing vibrations;
-* thin case walls amplifying small vibrations.
-
-These two problems were solved by:
-
-* changing printing from PLA to ABS plastic which can be acetone vapour smoothed ([see here](#acetone));
-* using thicker case walls.
-
-These tests indicated that the worm gear-set was feasable. The above improvements were implemented into the final design.
-
-### Rotor {#rotor}
-
-The rotor consists of 4 slip rings (+5V, GND, SIG1, SIG2) constructed using ~1.5mm thick copper piping slices. These were inexpensive to produce and provided a good surface for electrical connection. The CAD model and sensor mockup below were an indication of the appearance of the final design.
-
-![design-cad](/assets/distance-scanner/initial-concept-design-cad.png){:width="50%"}![final-design](/assets/distance-scanner/initital-concept-design.jpg){:width="50%"}
-
-### Assembly
-
-The first step in assembly was the rotor, the parts for which are shown below.
-
-From left to right: drive gear (with bearing mount), connector, bearing mount, +5V slip ring, GND slip ring, SIG1 slip ring, SIG2 slip ring, sensor mount, IR sensors.
-
-![rotor-gear-parts](/assets/distance-scanner/final-rotor-assembly.jpg)
-
-During assembly:
-
-![rotor-gear-parts](/assets/distance-scanner/rotor-assembly-1.jpg)
-
-#### Acetone Vapour Smoothing {#acetone}
-
-As part of assembly, the rotor and worm gear were treated with an acetone vapour bath. This temporarily dissolves the outer surface of the parts which merges the layers together. This smooths the outer surface and slightly strengthens the part. The setup consisted of a jar with approximately 10mL of acetone in. The print bed was heated to 90&deg;C and the acetone vapour was allowed to fill the jar. Parts were submerged in the gas for approximately 5 minutes.
-
-![acetone-treating](/assets/distance-scanner/acetone-treating.jpg)
+![acetone-treating](/assets/distance-scanner/hardware/acetone-treating.jpg)
 
 The treated product is shown below.
 
-![treated-rotor-and-worm](/assets/distance-scanner/final-gear-assembly-constructed.jpg)
+![treated-rotor-and-worm](/assets/distance-scanner/hardware/final-gear-assembly-constructed.jpg)
+
+
+### Rotor {#rotor}
+
+The rotor consists of 4 slip rings (+5V, GND, SIG1, SIG2) constructed using ~1.5mm thick copper piping slices. These were inexpensive to produce and provided a good surface for electrical connection. The CAD model for the rotor is shown below.
+
+<p align="center">
+	<img width="50%" src="/assets/distance-scanner/hardware/initial-concept-design-cad.png">
+</p>
+
+The rotor is printed in parts as shown below.
+
+![rotor-parts](/assets/distance-scanner/hardware/rotor-parts.jpg)
+
+The main shaft part is printed in one piece, with the bearing being inserted during printing (shown left). The copper rings and spacers are placed onto the shaft one by one, with friction holding them in place (shown right).
+
+![rotor-printing](/assets/distance-scanner/hardware/bearing-printing.jpg){:width="50%"}![rotor-assembling](/assets/distance-scanner/hardware/shaft-assembly.jpg){:width="50%"}
+
+After the rotor is assembled, the top sensor mount is glued on the top, and the wires are soldered directly to the sensor. This makes for a very compact design.
+
+<p align="center">
+	<img width="50%" src="/assets/distance-scanner/hardware/rotor-finished.jpg">
+</p>
+
+### [Electrical](#electrical)  {#electrical}
+
+Some simple brushes with plastic springs and copper contacts maintain electrical contact with the rings. Conductive lubricant was also used to combat corrosion and improve connection reliability.
+
+![rotor-printing](/assets/distance-scanner/electrical/brushes.jpg)
+
+Datalogging was performed to check the integrity of the connection. The data below has no smoothing (either from a capacitor or in software) and shows very little deviation in voltage reading. The almost discretised changes are changing sensor readings (refresh rate of ~40ms).
+
+![rotor-printing](/assets/distance-scanner/electrical/data-log.png)
+
+## [Future Plans](#future) {#future}
+
+At this point, other commitments and interests have taken over from work on this project. I may do a revisit to write some software and get a pointmap out of the raw data from the sensor. Only time will tell.
