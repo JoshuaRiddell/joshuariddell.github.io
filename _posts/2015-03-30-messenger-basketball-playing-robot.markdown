@@ -9,7 +9,7 @@ permalink: /projects/messenger-basketball-playing-robot/
 subtitle: A basic search and retrival craft made for a first year compulsory course at UQ.
 cover-image: /assets/messenger-basketball-playing-robot/thumbnail.jpg
 
-ongoing: true
+ongoing: false
 published: true
 ---
 
@@ -34,7 +34,7 @@ The high score of the robot is 157 so far, the highest human score I have heard 
 
 ![finished-robot](/assets/messenger-basketball-playing-robot/finished.jpg)
 
-The robot uses a webcam to track the basket and ball on the phone screen. It uses a simple 2 degree-of-freedom arm for interaction with the screen. My aim for this short (2-3 day) project was to have a robot which plays it 'as a human would', meaning, there is no software trickery by using tools such as [adb](http://developer.android.com/tools/help/adb.html).
+The robot uses a webcam to track the basket and ball on the phone screen. It uses a simple 3 degree-of-freedom arm for interaction with the screen. My aim for this short (2-3 day) project was to have a robot which plays it 'as a human would', meaning, there is no software trickery by using tools such as [adb](http://developer.android.com/tools/help/adb.html).
 
 ## [Computer Vision](#cv) {#cv}
 
