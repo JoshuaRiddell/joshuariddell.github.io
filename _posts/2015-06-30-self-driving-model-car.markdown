@@ -15,6 +15,8 @@ published: true
 
 With thanks to [Lachlan Robinson](https://www.linkedin.com/in/lachlan-robinson) for the fantastic thumbnail image.
 
+![car](/assets/self-driving-model-car/car.jpg)
+
 ## Quick Links
 
 #### Internal
