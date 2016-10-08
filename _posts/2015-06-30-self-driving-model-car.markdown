@@ -15,8 +15,6 @@ published: true
 
 With thanks to [Lachlan Robinson](https://www.linkedin.com/in/lachlan-robinson) for the fantastic thumbnail image.
 
-![car](/assets/self-driving-model-car/car.jpg)
-
 ## Quick Links
 
 #### Internal
@@ -36,6 +34,8 @@ With thanks to [Lachlan Robinson](https://www.linkedin.com/in/lachlan-robinson) 
 The robotics club at Queensland Univeristy of Technology ran a competition aiming to produce fully autonomous racing cars which stay inbetween blue and yellow coloured lines in relatively challenging lighting conditions. The competition was very open, with the only constraints being size restrictions and no external sensors (such as GPS). The use of computer vision was encouraged.
 
 I lead the team entry from UQ. Our car used colour thresholding and binary image morphological operation to find the position of the line. It then uses a simple proportional control algorithm to follow the line. A PID would've been too tempermental at this early stage in development. We came second in the competition, with time constraints due to the competition being held around exam time being the main challenge. The competition overall was a very good experience and I will definitely be competing next year.
+
+![car](/assets/self-driving-model-car/car.jpg)
 
 ## [Computer Vision](#cv) {#cv}
 
