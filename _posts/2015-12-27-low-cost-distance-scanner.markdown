@@ -41,7 +41,7 @@ Below are some iterations of the worm gears.
 
 ![gear-iterations](/assets/distance-scanner/hardware/gear-iterations.jpg)
 
-The tested rotor speed was 320RPM@3.3V which although much lower than the original, is still too fast for the sensor. As  shown in the DATA COLLECTION.
+The tested rotor speed was 320RPM@3.3V which although much lower than the original, is still too fast for the sensor. As  shown in the [data collection](#electrical).
 
 ![gear-iterations-1](/assets/distance-scanner/hardware/first-gearbox-1.jpg){:width="50%"}![gear-iterations-2](/assets/distance-scanner/hardware/first-gearbox-2.jpg){:width="50%"}
 
@@ -58,9 +58,7 @@ The treated product is shown below.
 
 The rotor consists of 4 slip rings (+5V, GND, SIG1, SIG2) constructed using ~1.5mm thick copper piping slices. These were inexpensive to produce and provided a good surface for electrical connection. The CAD model for the rotor is shown below.
 
-<p align="center">
-	<img width="50%" src="/assets/distance-scanner/hardware/initial-concept-design-cad.png">
-</p>
+![cad-design](/assets/distance-scanner/hardware/initial-concept-design-cad.png)
 
 The rotor is printed in parts as shown below.
 
