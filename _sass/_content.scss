@@ -21,11 +21,15 @@
 }
 
 .post-list-div{
+    width: 80%;
+    max-width: 400px;
     float: left;
     vertical-align: middle;
-    margin-top: 42px;
-    margin-bottom: 35px;
-    margin-left: 20px;
+    margin-top: 7px;
+}
+
+.post-subtitle {
+    font-size: $small-font-size;
 }
 
 .post-meta {
