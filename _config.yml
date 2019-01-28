@@ -8,9 +8,7 @@
 # Site settings
 title: JoshuaRiddell
 email: joshua.riddell11@gmail.com
-description: >
-  This is my home site, outlining my flagship projects that I have worked
-  on over the years.
+description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://joshuariddell.github.io" # the base hostname & protocol for your site
 github_username:  joshuariddell

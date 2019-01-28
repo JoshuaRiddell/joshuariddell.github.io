@@ -7,7 +7,7 @@ date:   2015-06-05 13:14:53 +1000
 
 permalink: /projects/black-box-craft/
 subtitle: A basic search and retrival craft made for a first year compulsory course at UQ.
-cover-image: /assets/black-box-craft/thumbnail.png
+cover-image: /assets/black-box-craft/thumbnail.jpg
 
 published: true
 ---

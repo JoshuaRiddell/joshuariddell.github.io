@@ -1,5 +1,7 @@
 ---
+title: Home
 layout: default
+order: 1
 ---
 
 <div class="home">
@@ -9,19 +11,21 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <div class="" style="float:left; width:200px">
-          <a href="{{ post.url | prepend: site.baseurl }}">
-            <img class="thumbnail" src="{{ post.cover-image | prepend: site.baseurl }}">
-          </a>
-        </div>
-        <!-- get the bounding dates of the project -->
-        <div class="post-list-div">
-          <span class="post-meta">{{ post.start_date | date: "%b %Y" }}
-            &rarr; {% if post.ongoing %}Present{% else %}{{ post.date | date: "%b %Y" }}{% endif %}</span>
+        <div>
+          <div class="" style="float:left; width:200px">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              <img class="thumbnail" src="{{ post.cover-image | prepend: site.baseurl }}">
+            </a>
+          </div>
+          <!-- get the bounding dates of the project -->
+          <div class="post-list-div">
+            <span class="post-meta">{{ post.start_date | date: "%b %Y" }}
+              &rarr; {% if post.ongoing %}Present{% else %}{{ post.date | date: "%b %Y" }}{% endif %}</span>
 
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+          </div>
         </div>
       </li>
     {% endfor %}
