@@ -84,6 +84,10 @@ Datalogging was performed to check the integrity of the connection. The data bel
 
 ![rotor-printing](/assets/distance-scanner/electrical/data-log.png)
 
+## [Demo](#demo) {#demo}
+
+<iframe width="100%" height="416" src="https://www.youtube.com/embed/HHPK5noI0ks" frameborder="0" allowfullscreen></iframe>
+
 ## [Future Plans](#future) {#future}
 
 At this point, other commitments and interests have taken over from work on this project. I may do a revisit to write some software and get a pointmap out of the raw data from the sensor. Only time will tell.
