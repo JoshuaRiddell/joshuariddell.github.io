@@ -73,11 +73,9 @@ while true
 
 Although this pseudocode shows the general logic, it has some issues. For example the lean_body and step_leg routines will take in the order of seconds to execute since they should be smooth motions. One way to rectify this is to make an intermediate motion planning layer between the kinematic model and leg hardware. Another way to implement this is to make the lean_body and step_leg routines non-blocking such that they can be periodically called to update the leg position. The non-blocking method was chosen because of its simplicity.
 
-The gait model is programmed as a state machine with the following states:
+The gait model is programmed as a state machine as summarised below.
 
-1. IDLE
-2. LEANING
-3. STEPPING
+![state-machine](/assets/micropython-quadruped/state_machine.png)
 
 The `IDLE` state maintains the body lean at `(0,0)` (which resets the body after a stepping event). The leg distance calculation and threshold checking is performed in this state. When a leg is over the stepping threshold, the leg is chosen as the "stepping leg", and the state is transitioned to the `LEANING` state. The `LEANING` state slowly moves the body over the centre of support of the three legs left excluding the "stepping leg". When the centre of gravity of the body is inside the triangle of support made by the three non-stepping legs, the state is transitioned to the `STEPPING` state. The stepping state lifts the "stepping leg" and places it back down at the "base stance" position. Once the step has been executed, the state transitions back to the `IDLE` state.
 
