@@ -6,7 +6,7 @@ start_date: 2016-03-30
 date:   2016-03-30 13:14:53 +1000
 
 permalink: /projects/messenger-basketball-playing-robot/
-subtitle: A basic search and retrival craft made for a first year compulsory course at UQ.
+subtitle: A computer vision project built to beat my friends in the Facebook Messenger basketball minigame.
 cover-image: /assets/messenger-basketball-playing-robot/thumbnail.jpg
 
 ongoing: false
