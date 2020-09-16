@@ -6,7 +6,7 @@ start_date: 2015-11-27
 date:   2015-11-27 13:14:53 +1000
 
 permalink: /projects/flappy-arm/
-subtitle: A basic search and retrival craft made for a first year compulsory course at UQ.
+subtitle: A 'crowd controlled robotic arm' in which people have to work together to control 1 degree of freedom of a 6DOF robotic arm.
 cover-image: /assets/flappy-arm/thumbnail.jpg
 
 published: true
