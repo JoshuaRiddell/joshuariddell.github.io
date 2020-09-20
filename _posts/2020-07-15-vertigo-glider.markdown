@@ -9,7 +9,7 @@ permalink: /projects/megabot-madball-challenge/
 subtitle: An agile, towable, underwater camera used in marine research and surveying.
 cover-image: /assets/vertigo/glider.jpg
 
-published: true
+published: false
 ---
 
 ## [Aim](#aim)  {#aim}
